@@ -1,9 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Import the cors package
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Enable CORS for all requests
+app.use(cors());
 
 // Middleware to parse request body
 app.use(bodyParser.json());
